@@ -1,0 +1,336 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(39, 39, 39);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  background: linear-gradient(135deg, #000000 25%, #0a0a0a 25%, #0a0a0a 50%, #000000 50%, #000000 75%, #0a0a0a 75%, #0a0a0a);
+  background-size: 40px 40px;
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+section {
+  width: 90%;
+  max-width: 500px;
+  background-color: black;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: 10px;
+}
+
+header {
+  width: 100%;
+  height: 160px;
+  border-bottom: 2px solid rgb(23, 23, 23);
+  background:url(./imgs/CodePath.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo {
+  height: 120px;
+}
+
+.logo img {
+  position: relative;
+  left: 50%;
+  width: 170px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 5px solid rgb(23, 23, 23);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  top: -85px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.details h1 {
+  margin: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.details p {
+  margin: 0;
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.counter {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto; /* Changed from fixed height to auto */
+  display: flex;
+  justify-content: space-evenly; /* Center items on larger screens */
+  flex-wrap: wrap; /* Allow wrapping for better layout */
+  margin-bottom: 3rem;
+  align-items: center; 
+  margin: 2rem 0;/* Center items vertically */
+}
+
+.counter div {
+  width: 45%;
+  height: 100px; /* Set width for larger screens */
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem; /* Space between buttons in column layout */
+}
+
+.counter div button {
+  width: 100%;
+  height: 100%;
+}
+
+.animated-button {
+  position: relative;
+  background-color: #041C32;
+  height: 4rem;
+  width: 100%;
+  max-width: 16rem;
+  border: 2px solid transparent;
+  text-align: left;
+  padding: 0.75rem;
+  color: #f1f5f9;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.animated-button::before,
+.animated-button::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  border-radius: 9999px;
+  transition: all 0.5s ease;
+}
+
+.animated-button::before {
+  width: 3rem;
+  height: 3rem;
+  right: 0.25rem;
+  top: 0.25rem;
+  background-color: #064663;
+  filter: blur(12px);
+}
+
+.animated-button::after {
+  width: 5rem;
+  height: 5rem;
+  right: 2rem;
+  top: 0.75rem;
+  background-color: #ECB365;
+  filter: blur(12px);
+}
+
+.animated-button:hover {
+  background-color: #04293A;
+  color: snow;
+  border-color: #f2813a;
+}
+
+.animated-button:hover::before {
+  top: 2rem;
+  right: 4rem;
+  filter: blur(0);
+}
+
+.animated-button:hover::after {
+  right: -0.5rem;
+  transform: scale(1.5);
+  filter: blur(0);
+}
+
+/* Initially hide the image */
+.icon {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 2;
+}
+
+/* Show the image when hovering over the button */
+.animated-button:hover .icon {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.button-text {
+  transition: transform 0.5s ease;
+}
+
+/* Move text slightly on hover to make room for the icon */
+.animated-button:hover .button-text {
+  transform: translateX(-1rem);
+}
+
+/* Social buttons */
+.social-links,
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Social {
+  width: 100%;
+  height: 80px;
+  background-color: #161616;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-family: sans-serif;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  background: black;
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.social-btn svg {
+  height: 24px;
+  width: 24px;
+}
+
+.social-btn span {
+  color: snow;
+  width: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.social-btn:hover {
+  width: 150px;
+  border-radius: 15px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: 100px;
+}
+
+#twitter svg {
+  fill: #1da1f2;
+}
+
+#linkedin svg {
+  fill: #0e76a8;
+}
+
+#github svg {
+  fill: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .animated-button {
+    width: 100%;
+    height: 3.5rem;
+  }
+
+  .details h1 {
+    font-size: 2rem;
+  }
+
+  .details p {
+    font-size: 0.9rem;
+  }
+
+  .counter div {
+    height: 80px;
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 1rem; /* Space between buttons */
+    display: flex; /* Ensure buttons stack correctly */
+    justify-content: center; /* Center buttons */
+    align-items: center; /* Center content */
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-button {
+    width: 100%;
+    height: 3rem;
+  }
+
+  .details h1 {
+    font-size: 1.8rem;
+  }
+
+  .details p {
+    font-size: 0.8rem;
+  }
+
+  .counter {
+    flex-direction: column;
+     /* Ensure column layout */
+  }
+
+  .counter div {
+    width: 80%; /* Full-width buttons for small devices */
+    margin-bottom: 1rem; /* Space between buttons */
+  }
+}
