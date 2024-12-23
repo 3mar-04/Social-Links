@@ -16,10 +16,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #4C585B;
-  background: linear-gradient(135deg, #000000 25%, #0a0a0a 25%, #0a0a0a 50%, #000000 50%, #000000 75%, #0a0a0a 75%, #0a0a0a);
-  background-size: 40px 40px;
-  animation: move 4s linear infinite;
+  background: url("./imgs/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 @keyframes move {
@@ -44,7 +44,7 @@ header {
   width: 100%;
   aspect-ratio: 1584/396;
   border-bottom: 2px solid rgb(23, 23, 23);
-  background:url("./imgs/Linkedin Banner.png");
+  background: url("./imgs/Linkedin Banner.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -103,8 +103,8 @@ header {
   justify-content: space-evenly; /* Center items on larger screens */
   flex-wrap: wrap; /* Allow wrapping for better layout */
   margin-bottom: 3rem;
-  align-items: center; 
-  margin: 2.5rem 0;/* Center items vertically */
+  align-items: center;
+  margin: 2.5rem 0; /* Center items vertically */
 }
 
 .counter div {
@@ -127,7 +127,7 @@ header {
 
 .animated-button {
   position: relative;
-  background-color: #041C32;
+  background-color: #041c32;
   height: 4rem;
   width: 100%;
   max-width: 16rem;
@@ -146,7 +146,7 @@ header {
 
 .animated-button::before,
 .animated-button::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 1;
   border-radius: 9999px;
@@ -167,12 +167,12 @@ header {
   height: 5rem;
   right: 2rem;
   top: 0.75rem;
-  background-color: #ECB365;
+  background-color: #ecb365;
   filter: blur(12px);
 }
 
 .animated-button:hover {
-  background-color: #04293A;
+  background-color: #04293a;
   color: snow;
   border-color: #f2813a;
 }
@@ -300,13 +300,18 @@ header {
     font-size: 0.9rem;
   }
 
+  .counter {
+    margin: 1rem 0;
+  }
   .counter div {
     height: 80px;
     width: 100%; /* Full width for smaller screens */
-    margin-bottom: 1rem; /* Space between buttons */
+    margin-bottom: 1rem;
+    /* Space between buttons */
     display: flex; /* Ensure buttons stack correctly */
     justify-content: center; /* Center buttons */
-    align-items: center; /* Center content */
+    align-items: center;
+    /* Center content */
   }
 }
 
@@ -326,7 +331,7 @@ header {
 
   .counter {
     flex-direction: column;
-     /* Ensure column layout */
+    /* Ensure column layout */
   }
 
   .counter div {
@@ -337,23 +342,23 @@ header {
 
 @media (max-width: 768px) {
   .logo img {
-    width: 140px;  /* Adjust width for smaller screens */
+    width: 140px; /* Adjust width for smaller screens */
     height: 140px; /* Adjust height for smaller screens */
-    top: -50px;    /* Adjust top positioning if needed */
+    top: -50px; /* Adjust top positioning if needed */
   }
 }
 
 @media (max-width: 480px) {
   .logo img {
-    width: 130px;  /* Further adjust width for very small screens */
+    width: 130px; /* Further adjust width for very small screens */
     height: 130px; /* Further adjust height for very small screens */
-    top: -30px;    /* Adjust top positioning if needed */
+    top: -30px; /* Adjust top positioning if needed */
   }
 }
 @media (max-width: 375px) {
   .logo img {
-    width: 120px;  /* Further adjust width for very small screens */
+    width: 120px; /* Further adjust width for very small screens */
     height: 120px; /* Further adjust height for very small screens */
-    top: -20px;    /* Adjust top positioning if needed */
+    top: -20px; /* Adjust top positioning if needed */
   }
 }
