@@ -42,7 +42,7 @@ section {
 
 header {
   width: 100%;
-  height: 130px;
+  aspect-ratio: 1584/396;
   border-bottom: 2px solid rgb(23, 23, 23);
   background:url("./imgs/Linkedin Banner.png");
   background-size: cover;
@@ -332,5 +332,28 @@ header {
   .counter div {
     width: 80%; /* Full-width buttons for small devices */
     margin-bottom: 1rem; /* Space between buttons */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 140px;  /* Adjust width for smaller screens */
+    height: 140px; /* Adjust height for smaller screens */
+    top: -50px;    /* Adjust top positioning if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 130px;  /* Further adjust width for very small screens */
+    height: 130px; /* Further adjust height for very small screens */
+    top: -30px;    /* Adjust top positioning if needed */
+  }
+}
+@media (max-width: 375px) {
+  .logo img {
+    width: 120px;  /* Further adjust width for very small screens */
+    height: 120px; /* Further adjust height for very small screens */
+    top: -20px;    /* Adjust top positioning if needed */
   }
 }
