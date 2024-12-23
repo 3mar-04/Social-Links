@@ -44,7 +44,7 @@ header {
   width: 100%;
   height: 130px;
   border-bottom: 2px solid rgb(23, 23, 23);
-  background:url(./imgs/Linkedin\ Banner.png);
+  background:url("./imgs/Linkedin Banner.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
